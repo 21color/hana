@@ -1,0 +1,393 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="chrome")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(href="./webpage.css", rel="stylesheet")
+link(href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gugi&family=Noto+Sans+KR:wght@300;400&display=swap", rel="stylesheet")
+link(href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-pen.css", rel="stylesheet")
+link(href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css", rel="stylesheet")
+link(rel="apple-touch-icon", sizes="57x57", href="./favicon/apple-icon-57x57.png")
+link(rel="apple-touch-icon", sizes="60x60", href="./favicon/apple-icon-60x60.png")
+link(rel="apple-touch-icon", sizes="72x72", href="./favicon/apple-icon-72x72.png")
+link(rel="apple-touch-icon", sizes="76x76", href="./favicon/apple-icon-76x76.png")
+link(rel="apple-touch-icon", sizes="114x114", href="./favicon/apple-icon-114x114.png")
+link(rel="apple-touch-icon", sizes="120x120", href="./favicon/apple-icon-120x120.png")
+link(rel="apple-touch-icon", sizes="144x144", href="./favicon/apple-icon-144x144.png")
+link(rel="apple-touch-icon", sizes="152x152", href="./favicon/apple-icon-152x152.png")
+link(rel="apple-touch-icon", sizes="180x180", href="./favicon/apple-icon-180x180.png")
+link(rel="icon", type="image/png", sizes="192x192", href="./favicon/android-icon-192x192.png")
+link(rel="icon", type="image/png", sizes="32x32", href="./favicon/favicon-32x32.png")
+link(rel="icon", type="image/png", sizes="96x96", href="./favicon/favicon-96x96.png")
+link(rel="icon", type="image/png", sizes="16x16", href="./favicon/favicon-16x16.png")
+link(rel="manifest", href="/manifest.json")
+link(rel="shortcut icon", href="./favicon/favicon.ico", type="image/x-icon")
+link(rel="icon", href="./favicon/favicon.ico", type="image/x-icon")
+meta(name="msapplication-TileColor", content="#ffffff")
+meta(name="msapplication-TileImage", content="./favicon/ms-icon-144x144.png")
+meta(name="theme-color", content="#ffffff")
+link(rel="stylesheet", href="https://use.fontawesome.com/releases/v6.0.0/css/all.css", integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS", crossorigin="anonymous")
+title 댕낮잠 | Sleep eat and play!
+//   title 
+.mainBigBox#mainbox
+  //   menuBar 
+  header.menuBar
+    nav.menunav
+      ul.bawowmain
+        li.yellowmenu
+          a.inmenu.fas.fa-bone(href="#")
+          ul.yellowdrop#dropmenu.
+        li.bluemenu
+          a.inmenu.titlemenu(href="#informabox") 댕낮잠
+          ul.bluedrop#dropmenu
+            li
+              a.maindex(href="#informabox") 댕낮잠이란
+            li
+              a.mapindex(href="#Maps") 낮잠지도
+        li.pinkmenu
+          a.inmenu.progrememenu(href="#Timeline") 프로그램
+          ul.pinkdrop#dropmenu
+            li
+              a.timeline(href="#Timeline") 일정표
+        li.greenmenu
+          a.inmenu.injoymenu#goplay(href="#Goodstm") 심심해요!
+          ul.greendrop#dropmenu
+            li
+              a.eatindex#goplay(href="#Goodstm") 어디로갈까?
+        li.usmenu
+          a.inmenu.withmenu#gobye(href="#goodbye") 참가방법
+        li.opsitymenu
+          a.inmenu.contactemenu(target="_blank", href="https://cafe.naver.com/cocodengdeng0218") 친구되기
+  //  모달창 
+  //
+     <div class="modarlwapper hidden">
+    					<div class="modal">
+    						<i class="fa-solid fa-bone" id="modalclose"></i>
+    						<div class="modalear" id="earleft"></div>
+    						<div class="modalear" id="earright"></div>
+    						<h1>댕낮잠 참가방법</h1>
+    					
+    						<div class="modalbody">
+    							<form class="modalForm">
+    								<div class="putit">
+    									<input type="text" class="Emailadress">
+    								</div>
+    
+    							</form>
+    						<button class="selectone">
+    							<span>참가하기</span>
+    						</button> 
+  //
+     </div>
+    					</div>
+    					</div> 
+  //  포폴문구 
+  .pFmodalWapper
+    img(src="./dogpng/mainemj.png", alt="pixeldog")
+    h1 본 페이지는 포트폴리오용으로 제작되었습니다.
+//   사이드바 
+.sidebar
+  .socialBob
+    a.kakaotalkBob(target="_blank", href="https://open.kakao.com/o/s8oryLXd")
+      img(src="./dogpng/social_bob1.png", alt="kakaotaicon")
+    a.twitterBob(target="_blank", href="https://mobile.twitter.com/")
+      img(src="./dogpng/social_bob2.png", alt="twitterIcon")
+    .bab
+      img(src="./dogpng/social_bob.png", alt="dogbob")
+//   poster 
+.soger
+  .poster
+    #posterimg
+      .titlebox
+        h1.title1 댕
+        h1.title2 댕
+        h1.title3 이
+        h1.title4 낮
+        h1.title5 잠
+        h1.title6 대
+        h1.title7 회
+        span.fas.fa-moon
+        img(src="./dogpng/maindog.png", alt="maindog1")
+    //   OUTERMENU
+    //   윗놈은 주최사정보! 
+    .othermenu
+      .contents.show#informabox
+        .ininfor
+          h1 댕낮잠
+          .innerinfor
+            p
+              span.focus 댕낮잠
+              | 은 시끄러운 도심에서 벗어나
+            p 우리의 작은 친구와 가족들에게
+            p 휴식과 행복을 주고자 기획된
+            p 애견 동반 행사입니다.
+            p
+              span.focus 2월 28일
+              |  첫시작을 함께 해 주세요!
+            strong
+              | 모든 수익금은 유기견단체에 기부됩니다
+              i.fas.fa-dog
+      .contents.show#Maps
+        .mapinfor
+          img.milkcase(src="./dogpng/milkcase.png", alt="milkcase")
+          img(src="./dogpng/MAP_2.png", alt="mapimg")
+          h1 낮잠지도
+          .mapsIntroduce
+            p
+            p
+    .contents.show#Timeline
+      .timelineimg
+      .dengnangam
+        .moreinfortimeline
+      .aboutpresent
+        h1
+          strong.pre 선물
+          | 도
+        h1 행사장 곳곳에 숨어있어요!
+        p
+          strong.cengcark 킁카킁카 
+          | 냄새따라서
+        p
+          strong.pre 선물
+          | 을 찾아보아요!
+    .contents.show#Goodstm
+      #selectorBox
+        #speechbubble
+          span#stringTarget
+        #selectdog
+        #selectarea
+          button.selector#eat
+          button.selector#play
+          button.selector#shopping
+    .contents.show#Timeineat
+      #abouteat
+        #eatimg
+          h1 먹는시간
+          .eatitle
+            span 댕낮잠 식당들에서는
+            p 강아지메뉴와 사람메뉴를
+            p 함께 만나볼 수 있어요!
+          #movedog
+          span#gohover
+          ul.eateat
+            li.fa-solid.fa-bone#bigm1
+              a.Eatrs.menu1 맛나멍
+              ul.subEat.submenu1
+                li
+                  a#subinfo1
+                    p 강아지 수제간식 전문점
+            li.fa-solid.fa-hotdog#bigm2
+              a.Eatrs.menu2 핫도기
+              ul.subEat.submenu2
+                li
+                  a#subinfo2
+                    p 강아지도 먹을 수 있는 핫도그
+            li.fa-solid.fa-cookie-bite#bigm3
+              a.Eatrs.menu3 도키
+              ul.subEat.submenu3
+                li
+                  a#subinfo3
+                    p 강아지용 디저트 전문
+            li.fa-solid.fa-carrot#bigm4
+              a.Eatrs.menu4 베지도기
+              ul.subEat.submenu4
+                li
+                  a#subinfo4
+                    p 채식단백질로 이루어진 건강식
+            li.fa-solid.fa-ice-cream#bigm5
+              a.Eatrs.menu5 멍스크림
+              ul.subEat.submenu5
+                li
+                  a#subinfo5
+                    p 아이스 디저트 전문점
+            li.fa-solid.fa-bread-slice#bigm6
+              a.Eatrs.menu6 댕브레드
+              ul.subEat.submenu6
+                li
+                  a#subinfo6
+                    p 고구마빵이 맛있는 곳
+            li.fa-solid.fa-mug-saucer#bigm7
+              a.Eatrs.menu7 카페위드독
+              ul.subEat.submenu7
+                li
+                  a#subinfo7
+                    p 독밀크로 만든 독슈페너가 인기!
+    .contents.show#playing
+      #aboutplaying
+        #playimg
+          h1 놀이시간
+          p.dogbubble
+            i.fa.solid.fa-circle-left
+            i.fa.solid.fa-circle-up
+            i.fa.solid.fa-circle-right
+            | 
+숨겨진 댕댕이가 나타나요!
+
+          span.playinfoBt1
+            i.fa.solid.fa-circle-left
+          .playinfo.pi1
+            img(src="./dogpng/playdog2.png", alt="toywithdog")
+            #pi1sinfo
+              p
+                span 댕댕이
+                | 가 좋아하는
+              p
+                span 장난감
+                | 부터
+              p
+                span 노즈워크
+                | 까지!
+              h3 이용한 장난감은
+              h3 수거 후에 즉시 소독해요~
+          span.playinfoBt2
+            i.fa.solid.fa-circle-up
+          .playinfo.pi2
+            img(src="./dogpng/playinfo2_dog.png", alt="rundog")
+            #pi2sinfo
+              p
+                span 댕댕이
+                | 를 위한
+              p
+                | 깨끗한 
+                span 수영장
+                | 과
+              p
+                | 댕댕이 
+                span 썬베드!
+              p
+                span 샤워공간
+                | 도 있어요!
+          span.playinfoBt3
+            i.fa.solid.fa-circle-right
+          .playinfo.pi3
+            img(src="./dogpng/playdog3.png", alt="twstdog")
+            #pi3sinfo
+              p 어디에도 없는
+              p
+                span 안전
+                | 하고 
+                span 푹신
+                | 한
+              p
+                span 댕댕이
+                | 전용 
+                span 미끄럼틀
+              p 그리고 진드기 걱정없이
+              p 뛰어놀 수 있는
+              h3 놀이공원!
+          #playdog.
+            
+            
+    .contents.show#shoppingspot
+      .shoppingwith
+        h1 쇼핑시간
+        #spinfor
+          p 더욱 더 다양한
+          p 의류와 장난감들이
+          p 기다리고 있어요!
+        #aboutshopping
+          #shoppingslide.
+            
+            
+          h2 입어볼 수 있어요!
+        .shoppingCart
+          .shoppingproducts
+            .cartSum
+              img.cartImg(src="./dogpng/shoppingcart1.png", alt="closetimg1")
+              h3.cartTitle 어썸멍
+              button.cartBtn#cbOne 입어보기
+            .cartSum
+              img.cartImg(src="./dogpng/shoppingcart2png.png", alt="closetimg2")
+              h3.cartTitle 브릭브릭
+              button.cartBtn#cbTwo 입어보기
+            .cartSum
+              img.cartImg(src="./dogpng/shoppingcart3.png", alt="closetimg3")
+              h3.cartTitle 베리네옷방
+              button.cartBtn#cbThree 입어보기
+            .cartSum
+              img.cartImg(src="./dogpng/shoppingcart4.png", alt="closetimg4")
+              h3.cartTitle 아지랑이
+              button.cartBtn#cbFour 입어보기
+            .cartSum
+              img.cartImg(src="./dogpng/shoppingcart5.png", alt="closetimg5")
+              h3.cartTitle 우리댕댕
+              button.cartBtn#cbFive 입어보기
+            .cartSum
+              img.cartImg(src="./dogpng/shppingcart6.png", alt="closetimg6")
+              h3.cartTitle 비욘드멍
+              button.cartBtn#cbSix 입어보기
+          .chaincompany
+            h2 함께하는 친구들
+            nav.moreinfo
+              ul.closet
+                | 의류
+
+                li.closub 어썸멍
+                li.closub 브릭브릭
+                li.closub 베리네옷방
+                li.closub 아지랑이
+                li.closub 우리댕댕
+                li.closub 비욘드멍
+              ul.toyset
+                | 장난감
+
+                li.toysub 토이도기
+                li.toysub 날아라댕댕
+                li.toysub 니즈더펫
+                li.toysub 놀자개
+                li.toysub 킁킁도로롱
+              ul.interior
+                | 기타
+
+                li.intersub 댕룸
+                li.intersub 캠핑독
+                li.intersub 도자
+                li.intersub 리빙앤멍
+                li.intersub 캐츠앤독
+                li.intersub
+    .contents.show#goodbye
+      .goodbyeDog
+        h1 참가방법
+        .informationDNJ
+          h2 누가 참여할 수 있나요?
+          p 실컷 자고, 놀고 먹고싶은 댕댕이들
+          p 그리고 그런 댕댕이들을 사랑하는 사람들
+          p 모두 참여가 가능합니다.
+        .informationDNJ
+          h2 어떻게 신청하나요?
+          p 바로옆에서 정보를 입력하세요!
+          p 그리고 신청 버튼을 눌러주세요.
+          p 댕낮잠 참여하기 끝!
+        .informationDNJ
+          h1#submittitle 신청서
+          form.submit(action="./sumitDog.php", method="get")
+            .putit
+              label(for="dogname")
+              input#dogname(autocomplete="off", type="text", name="dogname", placeholder="댕댕이 이름", tabindex="100")
+              p#dogname_alret
+                span 이름
+                | 을 확인해주세요.
+              label(for="Emailadress")
+              input#Emailadress(autocomplete="off", type="text", name="email", placeholder="이메일", tabindex="200")
+              p#Emailadress_alret
+                span 이메일
+                | 을 확인해주세요.
+            button#submitbtn(tabindex="300") 신청하기
+        .sumitmodal
+          .modalsumit
+            h3 신청완료!
+            p
+              span 2월 28일
+              | 에 만나요!
+          span#modalclose 돌아가기
+        img#flyingdog(src="./dogpng/testone2.png", alt="flyingdog")
+    #footer
+      ul.footerul
+        | 2022 댕낮잠
+
+        li
+          a.fa-solid.fa-house-chimney(href="#posterimg")
+        li
+          a.fa-solid.fa-envelope(href="mailto:lehhha0110@gmail.com")
+        li
+          a.fa-solid.fa-phone-flip(href="tel:01027343498")
+script(src="https://code.jquery.com/jquery-3.6.0.min.js", integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=", crossorigin="anonymous")
+script(src="./webpage.js")

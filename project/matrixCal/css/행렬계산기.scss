@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+$basicFontSize: 10px;
+$basicFontStyle: 'Roboto Mono', monospace;
+$mainColor: #fff0e5;
+$inputColor: #e7bd92b2;
+$fontColor: #020202;
+$hoverboxColor: #cca680b2;
+$borderColor: #66dfcbd3;
+$hoverBoxShadow: #cca6805d;
+* {
+	margin: 0;
+	padding: 0;
+	font-family: $basicFontStyle;
+	color: $fontColor;
+	background: 100%;
+}
+
+html,
+body {
+	height: 100%;
+	background-color: $mainColor;
+	animation: fadein 1500ms ease-out;
+}
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.titleBox {
+	display: inline-block;
+	width: 100%;
+	height: 9rem;
+	text-align: center;
+	color: $mainColor;
+	font : {
+		weight: 800;
+		size: 4rem;
+		family: 'Comfortaa', cursive;
+	}
+	letter-spacing: 0.5rem;
+	line-height: 8.8rem;
+	background: {
+		color: #ffffffaf;
+	}
+	color: $inputColor;
+	white-space: nowrap;
+	box-shadow: 0.2rem 0.2rem 0.7rem #e9d0b6;
+}
+
+.mainBox {
+	display: inline-block;
+	width: 90rem;
+	height: 40rem;
+	position: relative;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(90rem * -0.5, 47rem * -0.5);
+	background-color: #ffffffaf;
+	box-shadow: 0.2rem 0.2rem 0.7rem #e9d0b6;
+	border: 0.1px solid $inputColor;
+}
+
+input {
+	text-align: right;
+	display: inline-block;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 1rem;
+	background-color: #ffffffaf;
+	border: 0.1rem solid $inputColor;
+	font-size: 2rem;
+	color: #a36f3a;
+	font-weight: 500;
+}
+input:hover {
+	box-shadow: 0.2rem 0.2rem 0.5rem #e9d0b6;
+	border: 0.1rem solid $borderColor;
+	background-color: #ffffffea;
+}
+
+.AmainBox,
+.BmainBox,
+.calculateBox,
+.cluBox {
+	display: inline-block;
+	float: left;
+	margin: 1rem 1rem;
+	text-align: center;
+	width: 23rem;
+	height: 30rem;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	border: 0.1rem solid $inputColor;
+	transform: translate(1.6rem, 5.5rem);
+}
+
+.cluBox {
+	width: 5rem;
+	[class*='Bt'] {
+		font-size: 4rem;
+		color: $inputColor;
+		transition: all 0.5s linear;
+	}
+	div {
+		width: 4.9rem;
+		height: 7rem;
+		border: 0.1px transparent;
+		margin-bottom: 0.5rem;
+		line-height: 6.9rem;
+	}
+}
+[class*='Button'] {
+	display: inline-block;
+	line-height: 3.9rem;
+	width: 4rem;
+	height: 4rem;
+	border: 0.1px solid transparent;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	position: absolute;
+	top: 1.25rem;
+	right: 3rem;
+	text-align: center;
+	font-size: 4rem;
+	color: $inputColor;
+	transition: all 0.5s linear;
+}
+.buttBox {
+	width: 90rem;
+	height: 4.5rem;
+	position: absolute;
+	[class*='AH'] {
+		transform: translate(-22.5rem, 1.2rem);
+		font-size: 2rem;
+		color: $inputColor;
+	}
+	[class*='BH'] {
+		transform: translate(-2.5rem, 1.2rem);
+		font-size: 2rem;
+		color: $inputColor;
+	}
+}
+.resultButton {
+	margin-right: 19rem;
+}
+.titleBox:hover {
+	color: $borderColor;
+	box-shadow: 0.1rem 0.1rem 0.7rem $hoverBoxShadow;
+	background-color: #ffffffea;
+}
+.mainBox:hover {
+	color: $borderColor;
+	background-color: #ffffffea;
+	box-shadow: 0.1rem 0.1rem 0.7rem $hoverBoxShadow;
+}
+
+.AmainBox:hover,
+.BmainBox:hover,
+.calculateBox:hover,
+.cluBox:hover {
+	border: 0.2rem solid $borderColor;
+	background-color: #ffffffea;
+	box-shadow: 0.1rem 0.1rem 0.7rem #e9d0b6;
+}
+
+[class*='Bt']:hover,
+[class*='Button']:hover {
+	color: $borderColor;
+	cursor: pointer;
+}
+[class*='fa']:hover {
+	transform: rotate(180deg);
+}
+
+[class*='fa']:active {
+	transform: rotate(750deg);
+}
