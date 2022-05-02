@@ -1,0 +1,223 @@
+@font-face {
+  font-family: 'LeferiBaseType-RegularA';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LeferiBaseType-BoldA';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-BoldA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+  color: #202020;
+  text-decoration: none;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  background: whitesmoke;
+  letter-spacing: .3rem;
+  font-size: 62.5%;
+  height: 100%;
+  text-align: center;
+  font-family: 'LeferiBaseType-RegularA';
+}
+
+@media all and (max-width: 768px) {
+  body,
+  html {
+    font-size: 50%;
+  }
+}
+
+.detailpagewapper {
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+@media all and (max-width: 768px) {
+  .detailpagewapper {
+    width: 65rem;
+  }
+}
+
+.detailpage--header {
+  padding: 2rem;
+  background: #fff;
+  height: 10rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media all and (max-width: 768px) {
+  .detailpage--header {
+    height: 10rem;
+  }
+}
+
+.detailpage--header > h1 {
+  margin: 1rem;
+  padding: 1rem;
+  font-family: 'LeferiBaseType-BoldA';
+  font-size: 3rem;
+  color: #353442;
+}
+
+@media all and (max-width: 768px) {
+  .detailpage--header > h1 {
+    font-size: 2rem;
+  }
+}
+
+.detailpage--header.fixdheader {
+  position: fixed;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 1000;
+  height: 10rem;
+  width: 100%;
+}
+
+nav {
+  width: 100rem;
+  overflow: hidden;
+}
+
+nav > ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav > ul > li {
+  padding: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  height: 100%;
+}
+
+@media all and (max-width: 768px) {
+  nav > ul > li {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+nav > ul > li:hover {
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #5a2aea;
+  background: transparent;
+  border-radius: 0rem;
+}
+
+.detailpage--section {
+  -webkit-transition: .3s;
+  transition: .3s;
+  width: 86rem;
+  height: 100%;
+  -webkit-box-shadow: -2rem 3rem 7rem #c4c4c4;
+          box-shadow: -2rem 3rem 7rem #c4c4c4;
+  background: transparent;
+}
+
+.activebtn {
+  color: #5a2aea;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 5rem 5rem 5rem 1rem;
+  font-size: 2.5rem;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+img {
+  position: absolute;
+  width: 86rem;
+  visibility: hidden;
+  opacity: 0;
+  display: inline-block;
+}
+
+@media all and (max-width: 768px) {
+  img {
+    width: 100%;
+  }
+}
+
+footer {
+  height: 10rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer h2 {
+  font-size: 1.4rem;
+  color: #353442;
+}
+
+@media all and (max-width: 768px) {
+  footer h2 {
+    font-size: 1rem;
+  }
+}
