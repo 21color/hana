@@ -66,28 +66,28 @@ body {
   background-repeat: no-repeat;
 }
 
-@media all and (min-width: 1023px) and (max-width: 1440px) {
+@media screen and (max-width: 1440px) {
   html,
   body {
     font-size: 11px;
   }
 }
 
-@media all and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   html,
   body {
     font-size: 10px;
   }
 }
 
-@media all and (min-width: 767px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   html,
   body {
     font-size: 5.8px;
   }
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   html,
   body {
     font-size: 3.5px;
@@ -796,7 +796,7 @@ button {
   padding: 2rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .mycircle {
     width: 30rem;
   }
@@ -822,7 +822,7 @@ button {
   letter-spacing: .5rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .mycircle .info2 p {
     margin: 1rem;
   }
@@ -975,7 +975,7 @@ button {
   letter-spacing: .2rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .onclickviwer .hana_s_info .bubbleinfo {
     width: 40rem;
     height: 40rem;
@@ -1546,7 +1546,7 @@ button {
   margin: .5rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .info p {
     margin: 1rem;
   }
@@ -1628,7 +1628,7 @@ button {
   z-index: 200;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .myhightcircle {
     width: 70rem;
   }
@@ -1755,7 +1755,7 @@ button {
   letter-spacing: 0.2rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .myNameIsHana .hanaS__Header .headSet .headSet_logo {
     font-family: monospace;
     letter-spacing: 0rem;
@@ -2182,7 +2182,9 @@ button {
 }
 
 .mysection {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   scroll-snap-align: center;
   scroll-snap-stop: always;
   -webkit-transition: 0.5s;
@@ -2199,7 +2201,9 @@ button {
 .thisShowitems {
   width: 100%;
   height: 80rem;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 5rem;
   padding-bottom: 10rem;
   -webkit-box-align: center;
@@ -2527,7 +2531,7 @@ button {
   text-align: left;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .myskill .desk .infoskill {
     padding: 4rem;
     background: linear-gradient(-50deg, #fffff017, #ffba67);
@@ -2548,7 +2552,7 @@ button {
   letter-spacing: .7rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .myskill .desk .infoskill h1 {
     color: #fff;
     font-size: 3.5rem;
@@ -2564,7 +2568,7 @@ button {
   font-family: "GowunDodum-Regular";
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .myskill .desk .infoskill p {
     text-shadow: -1rem 1rem 3rem #e38b4c;
     color: #fff;
@@ -2783,7 +2787,7 @@ button {
           transform: translate(31rem, 0rem) rotate(5deg);
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .protfolios .AboutportFolio {
     width: 52rem;
     height: 60rem;
@@ -2844,7 +2848,7 @@ button {
   color: #4e4846;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .protfolios .AboutportFolio .aboutportfolio .aboutportfolio--title {
     font-size: 5rem;
     padding: .5rem;
@@ -2858,7 +2862,7 @@ button {
   color: #6d6562;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .protfolios .AboutportFolio .aboutportfolio .aboutportfolio--title--sub {
     font-size: 3rem;
   }
@@ -2870,7 +2874,7 @@ button {
   padding: 2rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .protfolios .AboutportFolio .aboutportfolio .aboutportfolio--info {
     width: 80%;
     height: 100%;
@@ -2884,7 +2888,7 @@ button {
   margin: .5rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .protfolios .AboutportFolio .aboutportfolio .aboutportfolio--info p {
     font-size: 2.5rem;
   }
@@ -2895,7 +2899,7 @@ button {
   font-size: 1.5rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .protfolios .AboutportFolio .aboutportfolio .aboutportfolio--info .boldthing {
     font-size: 2.5rem;
   }
@@ -2931,7 +2935,7 @@ button {
           justify-content: space-evenly;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .protfolios .AboutportFolio .aboutportfolio .aboutportfolio--button {
     height: 100%;
     width: 100%;
@@ -2955,7 +2959,7 @@ button {
   transition: .5s;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .protfolios .AboutportFolio .aboutportfolio .aboutportfolio--button button {
     width: 40%;
     height: 10rem;
@@ -2963,7 +2967,7 @@ button {
   }
 }
 
-@media all and (min-width: 767px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .protfolios .AboutportFolio .aboutportfolio .aboutportfolio--button button {
     font-size: 1.5rem;
     border: none;
@@ -3305,7 +3309,7 @@ button {
           transform: translate(1rem, 3rem);
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .mybookdesk .mybookdesk--main .kiosk .kiosktitle {
     letter-spacing: 0rem;
   }
@@ -3414,7 +3418,7 @@ button {
   border-radius: 10%;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .mybookdesk .mybookdesk--main .bookdesk__top .portfolioBook.matrixcal .matrixbody .matrixpad .padkey {
     width: 25%;
     height: 20%;
@@ -3814,7 +3818,7 @@ button {
           justify-content: space-evenly;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .blogfooter .contactmeside {
     width: 55rem;
     -webkit-transition: 1s;
@@ -3866,7 +3870,7 @@ button {
           justify-content: space-between;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .blogfooter .contactmeside .socialbox {
     width: 15%;
     -webkit-box-orient: vertical;
@@ -3979,7 +3983,7 @@ button {
   text-indent: 1rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .blogfooter .contactme_title {
     font-size: 5rem;
   }
@@ -3990,7 +3994,7 @@ button {
   letter-spacing: .2rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .blogfooter .contactme_ul {
     letter-spacing: .2rem;
     -webkit-transform: translateY(3rem);
@@ -4007,7 +4011,7 @@ button {
   text-indent: 1rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .blogfooter .contactme_ul .contactme_li {
     font-size: 2rem;
     -webkit-transform: translate(-1rem, -1rem);

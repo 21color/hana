@@ -25,25 +25,25 @@ $desktop: 1440px;
 }
 
 @mixin desktop {
-	@media all and (min-width:1023px) and (max-width:$desktop) {
+	@media screen and (max-width:$desktop) {
 		@content;
 	}
 }
 
 @mixin laptop {
-	@media all and (min-width:768px) and (max-width:$laptop) {
+	@media screen and (max-width:$laptop) {
 		@content;
 	}
 }
 
 @mixin tablet {
-	@media all and (min-width:767px) and (max-width:$tablet) {
+	@media screen and (max-width:$tablet) {
 		@content;
 	}
 }
 
 @mixin mobile {
-	@media all and (min-width:320px) and (max-width:479px) {
+	@media screen and (max-width:479px) {
 		@content;
 	}
 }
@@ -1830,7 +1830,7 @@ button {
 
 
 .mysection {
-	display: none;
+	display: flex;
 	scroll-snap-align: center;
 	scroll-snap-stop: always;
 	transition: 0.5s;
@@ -1847,7 +1847,7 @@ button {
 .thisShowitems {
 	width: 100%;
 	height: 80rem;
-	display: none;
+	display: flex;
 	padding-top: 5rem;
 	padding-bottom: 10rem;
 	align-items: center;
@@ -2062,7 +2062,7 @@ button {
 		.infoskill {
 			@include mobile() {
 				padding: 4rem;
-				background:linear-gradient(-50deg, #fffff017, #ffba67);
+				background: linear-gradient(-50deg, #fffff017, #ffba67);
 
 				box-shadow: -2rem 0.5rem 3rem #ffcc9266;
 				border-radius: 2rem;
@@ -2097,7 +2097,7 @@ button {
 
 			h1 {
 				@include mobile() {
-					color: #fff; 
+					color: #fff;
 
 					font-size: 3.5rem;
 					text-shadow: none;
@@ -2361,8 +2361,9 @@ button {
 
 				p {
 					@include mobile() {
-						font-size:2.5rem;
+						font-size: 2.5rem;
 					}
+
 					font-size: 1.5rem;
 					font-family: $fontFace;
 					margin: .5rem;
@@ -2370,8 +2371,9 @@ button {
 
 				.boldthing {
 					@include mobile() {
-						font-size:2.5rem;
+						font-size: 2.5rem;
 					}
+
 					position: relative;
 					font-size: 1.5rem;
 				}
@@ -2582,31 +2584,35 @@ button {
 		cursor: pointer;
 
 	}
+
 	.shoppingbag_in_bag::after {
 		content: 'product';
 		position: absolute;
 		font-size: 2rem;
-		color: darken(rgb(248, 212, 174),30%);
-		transform: translate(1rem,2.5rem);
+		color: darken(rgb(248, 212, 174), 30%);
+		transform: translate(1rem, 2.5rem);
 		letter-spacing: .2rem;
-		
+
 	}
+
 	.shoppingbag_in_bag {
 		width: 70%;
 		height: 50%;
 		background: #ffd79f;
 		box-shadow: inset -.3rem .3rem 3rem #ffe5c0e6, -.4rem .4rem 2rem #faa3da91;
-		transform: translate(2.5rem,5rem);
+		transform: translate(2.5rem, 5rem);
 		border-radius: .5rem .5rem 2rem 2rem;
 	}
+
 	.shoppingbag {
 		width: 95%;
 		height: 70%;
 		background: lighten(#6737f7, 30%);
 		border-radius: .5rem .5rem 3rem 3rem;
-		transform: translate(15%,30%) rotate(-5deg);
+		transform: translate(15%, 30%) rotate(-5deg);
 		box-shadow: -.5rem 1rem 3rem #ff8a8acc, inset -.5rem 1rem 4rem lighten($color: #5a2aea, $amount: 40%);
 	}
+
 	.shoppingbag--handle {
 		width: 73%;
 		height: 30%;
@@ -2620,6 +2626,7 @@ button {
 		border-radius: 3rem 10rem 4rem 1rem;
 
 	}
+
 	.pickportfolio {
 		animation: toggleanimation 1s infinite reverse;
 	}
@@ -2890,43 +2897,48 @@ button {
 
 				width: 50%;
 				height: 90%;
-			
+
 			}
 		}
+
 		.productdetail {
 
 			transform: translate(1rem);
 		}
+
 		.buttonbody {
 			$bodycolor: #f4e979;
 			width: 18rem;
 			transform: translate(3.5rem, -1rem);
 			height: 18rem;
 			background: $bodycolor;
-			box-shadow: inset -1rem 1rem 3rem  lighten($bodycolor,10%), -1rem 0.5rem 2.5rem #ff8a8aa8;
+			box-shadow: inset -1rem 1rem 3rem lighten($bodycolor, 10%), -1rem 0.5rem 2.5rem #ff8a8aa8;
 			border-radius: 50%;
+
 			.innerbutton {
 				width: 71%;
 				height: 71%;
-				box-shadow: inset -.5rem 1rem 3rem  darken($bodycolor,20%);
+				box-shadow: inset -.5rem 1rem 3rem darken($bodycolor, 20%);
 				background: transparent;
-				transform: translate(2.8rem,2.5rem);
+				transform: translate(2.8rem, 2.5rem);
 				border-radius: 50%;
-			display: flex; 
-			flex-wrap: wrap;
-			justify-content: space-between;
-				.innerbutton_innerbutton{
-				width: 2rem;
-				height: 2rem;
-				transform: translate(3.5rem,3.5rem);
-				border-radius: 50%;
-				background: mix($bodycolor,#ff8a8a);
-				box-shadow: inset -.5rem 1rem 1rem #ff8a8acc, 1rem -1rem 3rem lighten($bodycolor,10%);
-				&.bottombtn {
-					transform: translate(-3.5rem,7rem);
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+
+				.innerbutton_innerbutton {
+					width: 2rem;
+					height: 2rem;
+					transform: translate(3.5rem, 3.5rem);
+					border-radius: 50%;
+					background: mix($bodycolor, #ff8a8a);
+					box-shadow: inset -.5rem 1rem 1rem #ff8a8acc, 1rem -1rem 3rem lighten($bodycolor, 10%);
+
+					&.bottombtn {
+						transform: translate(-3.5rem, 7rem);
+					}
 				}
-			}
-			
+
 			}
 
 		}
@@ -3086,9 +3098,10 @@ button {
 		}
 	}
 
-	 .contactmeside:hover {
+	.contactmeside:hover {
 		margin-bottom: 1rem;
-	 }
+	}
+
 	.contactmeside {
 		// position: absolute;
 		width: 49rem;
@@ -3096,7 +3109,7 @@ button {
 		// opacity: 0;
 		border: .1rem solid white;
 		box-shadow: -1rem 1rem 4rem #c4c4ba96;
-		background:#ffffff6e; 
+		background: #ffffff6e;
 		height: 29rem;
 		border-radius: 2rem .5rem 2rem 2rem;
 		backdrop-filter: blur(.7rem);
@@ -3148,6 +3161,7 @@ button {
 				cursor: pointer;
 				transition: .5s;
 				display: inline-block;
+
 				span {
 					width: 100%;
 				}

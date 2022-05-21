@@ -5,7 +5,7 @@ window.onload = () => {
 	const helpBtn = document.querySelector('#helpBtn');
 	const matrixheader = document.querySelector('#matrixheader__title');
 
-	matrixheader.style.transform = "translateY(0rem)"
+	matrixheader.style.transform = 'translateY(0rem)';
 	modalBox.style.opacity = '1';
 	circle.addEventListener('click', (e) => {
 		modalBox.style.opacity = '0';
@@ -67,7 +67,7 @@ class makeVal {
 			i++;
 		}
 		return arrayB;
-	};
+	}
 	// 랜덤 돌릴때 실행될 메소드 //
 	randomNumber() {
 		let arrayA = [];
@@ -86,9 +86,9 @@ class makeVal {
 			i++;
 		}
 		return arrayB;
-	};
+	}
 
-	// 차곡차곡 for A  // 
+	// 차곡차곡 for A  //
 	inputValueA() {
 		let arrayA = [];
 		let i = 0;
@@ -102,8 +102,8 @@ class makeVal {
 			i++;
 		}
 		return arrayA;
-	};
-	// 차곡차곡 for B // 
+	}
+	// 차곡차곡 for B //
 	inputValueB() {
 		let arrayB = [];
 		let i = 0;
@@ -117,9 +117,9 @@ class makeVal {
 			i++;
 		}
 		return arrayB;
-	};
-	// plus 버튼 눌렀을때 // 
-	PlusValue (partAarray, partBarray) {
+	}
+	// plus 버튼 눌렀을때 //
+	PlusValue(partAarray, partBarray) {
 		let arrayA = [];
 		let arrayB = [];
 		let numberSum = 0;
@@ -138,9 +138,9 @@ class makeVal {
 			i++;
 		}
 		return arrayB;
-	};
-	// minus 버튼 눌렀을때 // 
-	MinusValue(partAarray, partBarray){
+	}
+	// minus 버튼 눌렀을때 //
+	MinusValue(partAarray, partBarray) {
 		let arrayA = [];
 		let arrayB = [];
 		let numberSum = 0;
@@ -159,9 +159,9 @@ class makeVal {
 			i++;
 		}
 		return arrayB;
-	};
-	// 곱하기할때 // 
-	MultiValue(partAarray, partBarray){
+	}
+	// 곱하기할때 //
+	MultiValue(partAarray, partBarray) {
 		let arrayA = [];
 		let arrayB = [];
 		let numberSum = 0;
@@ -184,7 +184,7 @@ class makeVal {
 			arrayB.push('<br>');
 		}
 		return arrayB;
-	};
+	}
 }
 
 // 콤마찍어주기!!! //
@@ -192,7 +192,7 @@ myComma = (numberSum) => {
 	return numberSum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };
 
-// popup pong pong... // 
+// popup pong pong... //
 popupfnc = (innertext) => {
 	const modalPop = document.querySelector('.modalPop');
 	modalPop.style.visibility = 'visible';
@@ -203,146 +203,147 @@ popupfnc = (innertext) => {
 			<span class="material-icons circle" id="mclose"> circle </span>
 		</div>
 			`;
-	const mclose = document.querySelector('#mclose');	
-	mclose.addEventListener('click',()=>{
-			modalPop.style.visibility = 'hidden';
-			modalPop.style.opacity = '0';
-			})
+	const mclose = document.querySelector('#mclose');
+	mclose.addEventListener('click', () => {
+		modalPop.style.visibility = 'hidden';
+		modalPop.style.opacity = '0';
+	});
 };
 
 // btn click!!! and keyup ------- > boom
 
-$(document).on({ click: (e) => {
-	const regsom = /^[1-7]{1}$/;
-	const regtest = regsom.test($('.Arow, .Acol, .Brow, .Bcol').val());
-	const testNum = 7;
-	switch (e.target.id) {
-		case 'calculate':
-			if (
-				regsom.test($('.Arow').val()) &&
-				regsom.test($('.Acol').val()) &&
-				regsom.test($('.Brow').val()) &&
-				regsom.test($('.Bcol').val())
-			) 
-			{
-				$('#shuffleBtn, #addBtn, #removeBtn, #multiBtn').css({
-					visibility: 'visible',
-					opacity: '1',
-					marginLeft: '3.2rem',
-				});
-			} else if (testNum < $('.Arow, .Acol, .Borw, .Bcol').val()) {
-				popupfnc(`<p>지정된 숫자만 입력해주세요.</p>
-				<p>1부터 7까지의 숫자만 입력 가능합니다.</p>`)
-			} else {
-				popupfnc(`<p>행렬을 먼저 만들어주세요.</p>
+$(document).on({
+	click: (e) => {
+		const regsom = /^[1-7]{1}$/;
+		const regtest = regsom.test($('.Arow, .Acol, .Brow, .Bcol').val());
+		const testNum = 7;
+		switch (e.target.id) {
+			case 'calculate':
+				if (
+					regsom.test($('.Arow').val()) &&
+					regsom.test($('.Acol').val()) &&
+					regsom.test($('.Brow').val()) &&
+					regsom.test($('.Bcol').val())
+				) {
+					$('#shuffleBtn, #addBtn, #removeBtn, #multiBtn').css({
+						visibility: 'visible',
+						opacity: '1',
+						marginLeft: '3.2rem',
+					});
+				} else if (testNum < $('.Arow, .Acol, .Borw, .Bcol').val()) {
+					popupfnc(`<p>지정된 숫자만 입력해주세요.</p>
+				<p>1부터 7까지의 숫자만 입력 가능합니다.</p>`);
+				} else {
+					popupfnc(`<p>행렬을 먼저 만들어주세요.</p>
 				<p>행렬이 만들어진 후에 연산버튼이 활성화됩니다.</p>`);
-
-			}
-			break;
-// readom btn //  
-		case 'shuffleBtn':
-			if (regtest) {
-				PartA = new makeVal('boxAnum', $('.Arow').val(), $('.Acol').val());
-				PartB = new makeVal('boxBnum', $('.Brow').val(), $('.Bcol').val());
-				$('.Resultbox__Abox').html(PartA.randomNumber());
-				$('.Resultbox__Bbox').html(PartB.randomNumber());
-			}
-			break;
-// reset btn // 
-		case 'refreshBtn':
-			$('.Arow, .Acol, .Brow, .Bcol').val('');
-			$('.Resultbox__Abox, .Resultbox__Bbox, .Resultbox__finalBox').html('');
-			$('.Resultbox__finalBox').css('display', 'none');
-			$('#shuffleBtn, #addBtn, #removeBtn, #multiBtn').css({ visibility: 'hidden', opacity: '0', marginLeft: '-5.2rem' });
-			break;
-// add btn // 
-		case 'addBtn':
-			if ($('.Arow').val() == $('.Brow').val() && $('.Acol').val() == $('.Bcol').val() && regtest) {
-				$('.Resultbox__finalBox').html('');
-				$('.Resultbox__finalBox').css('display', 'block');
-				$('html, body').animate({ scrollTop: '1000' }, 800);
-				PartA = new makeVal('boxAnum', $('.Arow').val(), $('.Acol').val());
-				PartB = new makeVal('boxBnum', $('.Brow').val(), $('.Bcol').val());
-				Finalresult = new makeVal('resultNum', $('.Arow').val(), $('.Acol').val());
-				$('.Resultbox__finalBox').html(Finalresult.PlusValue(PartA.inputValueA(), PartB.inputValueB()));
-			} else {
-				popupfnc(`<p>행렬을 다시 확인해주세요.</p>
+				}
+				break;
+			// readom btn //
+			case 'shuffleBtn':
+				if (regtest) {
+					PartA = new makeVal('boxAnum', $('.Arow').val(), $('.Acol').val());
+					PartB = new makeVal('boxBnum', $('.Brow').val(), $('.Bcol').val());
+					$('.Resultbox__Abox').html(PartA.randomNumber());
+					$('.Resultbox__Bbox').html(PartB.randomNumber());
+				}
+				break;
+			// reset btn //
+			case 'refreshBtn':
+				$('.Arow, .Acol, .Brow, .Bcol').val('');
+				$('.Resultbox__Abox, .Resultbox__Bbox, .Resultbox__finalBox').html('');
+				$('.Resultbox__finalBox').css('display', 'none');
+				$('#shuffleBtn, #addBtn, #removeBtn, #multiBtn').css({
+					visibility: 'hidden',
+					opacity: '0',
+					marginLeft: '-5.2rem',
+				});
+				break;
+			// add btn //
+			case 'addBtn':
+				if ($('.Arow').val() == $('.Brow').val() && $('.Acol').val() == $('.Bcol').val() && regtest) {
+					$('.Resultbox__finalBox').html('');
+					$('.Resultbox__finalBox').css('display', 'block');
+					$('html, body').animate({ scrollTop: '1000' }, 800);
+					PartA = new makeVal('boxAnum', $('.Arow').val(), $('.Acol').val());
+					PartB = new makeVal('boxBnum', $('.Brow').val(), $('.Bcol').val());
+					Finalresult = new makeVal('resultNum', $('.Arow').val(), $('.Acol').val());
+					$('.Resultbox__finalBox').html(Finalresult.PlusValue(PartA.inputValueA(), PartB.inputValueB()));
+				} else {
+					popupfnc(`<p>행렬을 다시 확인해주세요.</p>
 				<p>A와 B의 행렬이 같아야 합니다.</p>`);
-			}
-			break;
-// multi btn // 
-		case 'multiBtn':
-			if ($('.Acol').val() == $('.Brow').val() && regtest) {
-				$('.Resultbox__finalBox').html('');
-				$('.Resultbox__finalBox').css('display', 'block');
-				$('html, body').animate({ scrollTop: '1000' }, 800);
-				PartA = new makeVal('boxAnum', $('.Arow').val(), $('.Acol').val());
-				PartB = new makeVal('boxBnum', $('.Brow').val(), $('.Bcol').val());
-				Finalresult = new makeVal('resultNum', $('.Brow').val(), $('.Bcol').val());
-				$('.Resultbox__finalBox').html(Finalresult.MultiValue(PartA.inputValueA(), PartB.inputValueB()));
-			} else {
-				popupfnc(`<p>행렬을 다시 확인해주세요.</p>
+				}
+				break;
+			// multi btn //
+			case 'multiBtn':
+				if ($('.Acol').val() == $('.Brow').val() && regtest) {
+					$('.Resultbox__finalBox').html('');
+					$('.Resultbox__finalBox').css('display', 'block');
+					$('html, body').animate({ scrollTop: '1000' }, 800);
+					PartA = new makeVal('boxAnum', $('.Arow').val(), $('.Acol').val());
+					PartB = new makeVal('boxBnum', $('.Brow').val(), $('.Bcol').val());
+					Finalresult = new makeVal('resultNum', $('.Brow').val(), $('.Bcol').val());
+					$('.Resultbox__finalBox').html(Finalresult.MultiValue(PartA.inputValueA(), PartB.inputValueB()));
+				} else {
+					popupfnc(`<p>행렬을 다시 확인해주세요.</p>
 				<p>곱셈은 A의 열의 개수와 <br>
 				B의 행의 개수가 같아야합니다.</p>`);
-			}
-			break;
-//minus btn // 
-		case 'removeBtn':
-			if ($('.Arow').val() == $('.Brow').val() && $('.Acol').val() == $('.Bcol').val() && regtest) {
-				$('.Resultbox__finalBox').html('');
-				$('.Resultbox__finalBox').css('display', 'block');
-				$('html, body').animate({ scrollTop: '1000' }, 800);
-				PartA = new makeVal('boxAnum', $('.Arow').val(), $('.Acol').val());
-				PartB = new makeVal('boxBnum', $('.Brow').val(), $('.Bcol').val());
-				Finalresult = new makeVal('resultNum', $('.Arow').val(), $('.Acol').val());
-				$('.Resultbox__finalBox').html(Finalresult.MinusValue(PartA.inputValueA(), PartB.inputValueB()));
-			} else {
-				popupfnc(`<p>행렬을 다시 확인해주세요.</p>
+				}
+				break;
+			//minus btn //
+			case 'removeBtn':
+				if ($('.Arow').val() == $('.Brow').val() && $('.Acol').val() == $('.Bcol').val() && regtest) {
+					$('.Resultbox__finalBox').html('');
+					$('.Resultbox__finalBox').css('display', 'block');
+					$('html, body').animate({ scrollTop: '1000' }, 800);
+					PartA = new makeVal('boxAnum', $('.Arow').val(), $('.Acol').val());
+					PartB = new makeVal('boxBnum', $('.Brow').val(), $('.Bcol').val());
+					Finalresult = new makeVal('resultNum', $('.Arow').val(), $('.Acol').val());
+					$('.Resultbox__finalBox').html(Finalresult.MinusValue(PartA.inputValueA(), PartB.inputValueB()));
+				} else {
+					popupfnc(`<p>행렬을 다시 확인해주세요.</p>
 				<p>A와 B의 행렬이 같아야 합니다.</p>`);
-			}
-			break;
-	}
-},
-	keyup : (e)=>{
-			$(e.target).val(
-				$(e.target)
-					.val()
-					.replace(/[^-0-9]/g, '')
-			);
-			switch(e.target.className) {
+				}
+				break;
+		}
+	},
+	keyup: (e) => {
+		$(e.target).val(
+			$(e.target)
+				.val()
+				.replace(/[^-0-9]/g, '')
+		);
+		switch (e.target.className) {
 			case 'boxinputBox':
-			$('.warningShow').css({ opacity: '1' });
-			break;
-			
-			default:
-			$('.warningShow').css({ opacity: '0' });
+				$('.warningShow').css({ opacity: '1' });
+				break;
 
-	}
-}
-}
-);
-// input min // 
+			default:
+				$('.warningShow').css({ opacity: '0' });
+		}
+	},
+});
+// input min //
 $('.Arow, .Acol, .Brow, .Bcol').on('input', (e) => {
 	PartA = new makeVal('boxAnum', $('.Arow').val(), $('.Acol').val());
 	PartB = new makeVal('boxBnum', $('.Brow').val(), $('.Bcol').val());
 	const regsom = /^[1-7]$/;
 	let testNum = 7;
 	if (testNum < $(e.target).val()) {
-			popupfnc(`<p>지정된 숫자만 입력해주세요.</p>
-			<p>1부터 7까지의 숫자만 입력 가능합니다.</p>`)
-			$(e.target).val('');
-			$('.Resultbox__finalBox').css('display', 'none');
-			$('#shuffleBtn, #addBtn, #removeBtn, #multiBtn').css({ visibility: 'hidden', opacity: '0', marginLeft: '-5.2rem' });
-		} else {
-		switch(e.target.className) {
+		popupfnc(`<p>지정된 숫자만 입력해주세요.</p>
+			<p>1부터 7까지의 숫자만 입력 가능합니다.</p>`);
+		$(e.target).val('');
+		$('.Resultbox__finalBox').css('display', 'none');
+		$('#shuffleBtn, #addBtn, #removeBtn, #multiBtn').css({ visibility: 'hidden', opacity: '0', marginLeft: '-5.2rem' });
+	} else {
+		switch (e.target.className) {
 			case 'Arow':
 			case 'Acol':
-			$('.Resultbox__Abox').html(PartA.makeofBox());
-			break;
+				$('.Resultbox__Abox').html(PartA.makeofBox());
+				break;
 			case 'Brow':
-			case 'Bcol':	
-			$('.Resultbox__Bbox').html(PartB.makeofBox());
-			break;
+			case 'Bcol':
+				$('.Resultbox__Bbox').html(PartB.makeofBox());
+				break;
 		}
 	}
 	if (
@@ -357,6 +358,3 @@ $('.Arow, .Acol, .Brow, .Bcol').on('input', (e) => {
 		$('.waring').text('1부터 7까지의 숫자를 입력해주세요.');
 	}
 });
-
-
-
